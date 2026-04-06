@@ -14,7 +14,7 @@ export default function LeadForm({ onAdd }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:5000/api/leads", {
+    const res = await fetch("https://mini-crm-8im0.onrender.com/api/leads", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
