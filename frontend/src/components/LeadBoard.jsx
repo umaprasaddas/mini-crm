@@ -8,7 +8,7 @@ export default function LeadBoard() {
       try {
         console.log("Fetching leads...");
 
-        const res = await fetch("https://mini-crm-8im0.onrender.com/leads");
+        const res = await fetch("https://mini-crm-8im0.onrender.com/api/leads");
         console.log("Response:", res);
 
         const data = await res.json();
@@ -24,7 +24,7 @@ export default function LeadBoard() {
   }, []);
 
   const updateStatus = async (id, status) => {
-    const res = await fetch(`https://mini-crm-8im0.onrender.com/leads/${id}`, {
+    const res = await fetch(`https://mini-crm-8im0.onrender.com/api/leads/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"
